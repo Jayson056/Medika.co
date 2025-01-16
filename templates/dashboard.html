@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}"> 
+    <title>Patient Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+        .sidebar {
+            background-color: #1E88E5;
+            width: 250px;
+            height: 100vh;
+            padding: 20px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .sidebar a img {
+            margin-right: 10px;
+        }
+        .sidebar .profile {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .sidebar .profile img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .main {
+            flex: 1;
+            background-color: #F4F6F8;
+            padding: 40px;
+        }
+        .description {
+            font-size: 18px;
+            word-spacing: 3.8px;
+            line-height: 23px;
+            font-style: poppins;
+            background-color: white;
+            padding: 25px;
+            margin-top: 50px;
+            margin-right: 405px;
+            border-radius: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .description h2 {
+            color: #1E88E5;
+            margin-top: 5px;
+        }
+        .top-right-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .dots {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 10px);
+            grid-gap: 5px;
+        }
+        .dots span {
+            width: 10px;
+            height: 10px;
+            background-color: #1E88E5;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div>
+            <a href="#">
+                <img src="{{ url_for('static', filename='assets/add.png') }}" alt="Add Icon"> Add Patient
+            </a>
+            <a href="#">
+                <img src="{{ url_for('static', filename='assets/search.png') }}" alt="View Icon"> View All Patient Record
+            </a>
+            <a href="#">
+                <img src="{{ url_for('static', filename='assets/search.png') }}" alt="Search Icon"> Search Patient Record
+            </a>
+        </div>
+        <div class="profile">
+            <img src="{{ url_for('static', filename='assets/medika-logo.png') }}" alt="Profile Icon">
+            <span>Dr. Alex Rebuca</span>
+        </div>
+    </div>
+    <div class="main">
+        <div class="top-right-icon">
+            <img src="{{ url_for('static', filename='assets/medika-sq.png') }}" alt="Icon" width="50">
+        </div>
+        <div class="description">
+            <h2>Description</h2>
+            <p>
+                Lorem ipsum dolor amet, consectetuer adipiscing elit. Effictur maecenas inceptos sollicitudin convallis orci quis in tristique. Sollicitudin risus facilisis; taciti duis commodo laoreet. Consectetur facilisis potenti lobortis praesent at pulvinar proin. Lorem ipsum odor amet, consectetuer adipiscing elit.
+            </p>
+        </div>
+        <div class="dots">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</body>
+</html>
